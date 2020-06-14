@@ -1,0 +1,17 @@
+@import "../../../scss/styles.scss";
+
+section {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  // height: 50rem;
+  height: $height-large;
+  padding: 6rem;
+
+  >.post {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

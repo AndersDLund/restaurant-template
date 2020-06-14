@@ -3,14 +3,47 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MainComponent } from './main/main.component';
+import { BlogComponent } from './blog/blog.component';
+import { MenuComponent } from './menu/menu.component';
+import { EventsComponent } from './events/events.component';
+import { ShopComponent } from './shop/shop.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { NavigationComponent } from './shared/components/navigation/navigation.component';
+import { AboutComponent } from './main/about/about.component';
+import { SocialComponent } from './main/social/social.component';
+import { ReviewsComponent } from './main/reviews/reviews.component';
+import { ProvisionsComponent } from './main/provisions/provisions.component';
+import { ContactComponent } from './shared/components/footer/contact/contact.component';
+import { JumbotronComponent } from './main/jumbotron/jumbotron.component';
+import { CalendarComponent } from './main/calendar/calendar.component';
+import { FeaturedBlogComponent } from './main/featured-blog/featured-blog.component';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent,
+    BlogComponent,
+    MenuComponent,
+    EventsComponent,
+    ShopComponent,
+    FooterComponent,
+    NavigationComponent,
+    AboutComponent,
+    SocialComponent,
+    ReviewsComponent,
+    ProvisionsComponent,
+    ContactComponent,
+    JumbotronComponent,
+    CalendarComponent,
+    FeaturedBlogComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,51 @@
+@import "../../../scss/styles.scss";
+
+section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: $height-medium;
+  justify-content: center;
+
+
+  >.review-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 15rem;
+
+    >figure {
+      height: 7.5rem;
+      width: 7.5rem;
+
+      >img {
+        border-radius: 50%;
+        height: inherit;
+        width: inherit;
+
+      }
+    }
+
+    >p {
+      font-size: 1.5rem;
+    }
+  }
+
+  >.rating-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    >.rating {
+      display: grid;
+      gap: .5rem;
+      grid-template-columns: repeat(5, 2rem);
+
+      >fa-icon {
+        color: $primary;
+        font-size: 2rem;
+      }
+    }
+  }
+}

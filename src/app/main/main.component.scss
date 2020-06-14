@@ -1,0 +1,81 @@
+@import '../../scss/styles.scss';
+
+main {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(12, 1fr);
+
+  >app-navigation {
+    grid-column: 1 / 13;
+
+    // @include media-breakpoint-down(lg) {
+    //   grid-column: span 12;
+    // }
+  }
+
+  >.welcome-container {
+    grid-column: 1 / 13;
+    height: 100vh;
+
+    // @include media-breakpoint-down(lg) {
+    //   grid-column: span 12;
+    // }
+  }
+
+  >app-provisions {
+    grid-column: 1 / 13;
+
+    // @include media-breakpoint-down(lg) {
+    //   grid-column: span 12;
+    // }
+  }
+
+  >app-social {
+    grid-column: 1 / 13;
+
+    // @include media-breakpoint-down(lg) {
+    //   grid-column: span 12;
+    // }
+  }
+
+  >app-featured-blog {
+    grid-column: 1 / 7;
+
+    // @include media-breakpoint-down(lg) {
+    //   grid-column: 1 / 7;
+    // }
+
+    @include media-breakpoint-down(md) {
+      grid-column: span 12;
+    }
+  }
+
+  >app-calendar {
+    grid-column: 7 / 13;
+
+    // @include media-breakpoint-down(lg) {
+    //   grid-column: 7 / 13;
+    // }
+
+    @include media-breakpoint-down(md) {
+      grid-column: span 12;
+    }
+  }
+
+  >app-reviews {
+    grid-column: 1 / 13;
+
+
+    // @include media-breakpoint-down(lg) {
+    //   grid-column: span 12;
+    // }
+  }
+
+  >app-footer {
+    grid-column: 1 / 13;
+
+    // @include media-breakpoint-down(lg) {
+    //   grid-column: span 12;
+    // }
+  }
+}

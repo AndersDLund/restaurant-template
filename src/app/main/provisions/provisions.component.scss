@@ -1,0 +1,22 @@
+@import "../../../scss/styles.scss";
+
+section {
+  display: flex;
+  height: $height-medium;
+
+  >div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 50%;
+
+    &.food {
+      background-image: url(/assets/images/food.jpg);
+    }
+
+    &.drink {
+      background-image: url(/assets/images/drink.jpg);
+    }
+  }
+}
