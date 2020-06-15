@@ -5,9 +5,20 @@ section {
   gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  // height: 50rem;
   height: $height-large;
   padding: 6rem;
+
+  @include media-breakpoint-down(md) {
+    height: 75rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  @include media-breakpoint-down(sm) {
+    height: 100rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 1.5rem;
+  }
 
   >.post {
     background-position: center;

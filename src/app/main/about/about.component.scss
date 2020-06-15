@@ -5,16 +5,20 @@ section {
   display: flex;
   height: 30%;
   justify-content: center;
-  padding: 0 6rem;
+  padding: 0 10rem;
+
+  @include media-breakpoint-down(md) {
+    padding: 0 5rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0 1rem;
+    height: auto;
+  }
 
   >p {
     color: $foreground;
-    font-size: 2rem;
-    line-height: 3rem;
-    text-align: center;
-
-    @include media-breakpoint-down(md) {
-      font-size: 1rem;
-    }
+    font-size: $font-small;
+    line-height: 2rem;
   }
 }

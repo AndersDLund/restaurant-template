@@ -1,7 +1,163 @@
 @import "../../../../scss/styles.scss";
 
 footer {
+  align-items: center;
   background-color: $foreground;
-  border: 1px solid black;
-  height: $height-medium;
+  height: 40rem;
+  position: relative;
+
+  @include media-breakpoint-down(md) {
+    height: 60rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: auto;
+    padding: 0;
+  }
+
+  >.footer-container {
+    // align-items: center;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(8, 1fr);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    @include media-breakpoint-down(md) {
+      align-items: center;
+      gap: 5rem;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 1fr 1fr;
+      padding-top: 2.5rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      gap: 1rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      padding: 1rem;
+    }
+
+    >.logo-container {
+      grid-column: 2 / 4;
+
+      @include media-breakpoint-down(sm) {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      >.logo {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        >fa-icon {
+          color: $background;
+          font-size: $font-regular;
+        }
+
+        >p {
+          color: $background;
+          font-size: $font-regular;
+          margin: 0;
+          text-align: center;
+
+          >span {
+            font-size: $font-small;
+          }
+        }
+      }
+    }
+
+    >.details {
+      align-items: center;
+      color: $background;
+      display: flex;
+      flex-direction: column;
+      font-size: $font-small;
+      grid-column: 4 / 6;
+
+      @include media-breakpoint-down(sm) {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      a {
+        color: $secondary;
+        text-decoration: none;
+      }
+    }
+
+    >form {
+      display: grid;
+      gap: 1rem;
+      grid-column: 6 / 8;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(5, 3.5rem);
+
+      @include media-breakpoint-down(md) {
+        grid-column: 2 / 6;
+        grid-row: 2;
+      }
+
+      @include media-breakpoint-down(sm) {
+        grid-column: 1;
+        grid-row: 3;
+      }
+
+      >input {
+        background-color: transparent;
+        border: 2px solid $background;
+
+        &.name-input {
+          grid-column: span 1;
+          grid-row: 1;
+        }
+
+        &.email-input {
+          grid-column: span 1;
+          grid-row: 1;
+        }
+
+        &.message-input {
+          grid-column: span 2;
+          grid-row: 2 / 5;
+        }
+      }
+
+      >button {
+        background-color: $primary;
+        border: none;
+        grid-column: 2;
+      }
+    }
+
+    >.bottom {
+      align-items: center;
+      background-color: #262626;
+      bottom: 0;
+      display: flex;
+      height: 5rem;
+      justify-content: center;
+      left: 0;
+      position: absolute;
+      right: 0;
+
+      @include media-breakpoint-down(sm) {
+        position: relative;
+      }
+
+      >p {
+        color: $accent;
+        @include media-breakpoint-down(sm) {
+          text-align: center;
+        }
+
+        >a {
+          color: $secondary;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }

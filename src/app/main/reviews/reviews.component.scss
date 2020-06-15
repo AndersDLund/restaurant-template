@@ -7,12 +7,25 @@ section {
   height: $height-medium;
   justify-content: center;
 
+  @include media-breakpoint-down(sm) {
+    height: auto;
+  }
+
 
   >.review-container {
     align-items: center;
     display: flex;
     justify-content: center;
-    padding: 0 15rem;
+    padding: 0 10rem;
+
+    @include media-breakpoint-down(md) {
+      padding: 0 5rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 1rem;
+      flex-direction: column;
+    }
 
     >figure {
       height: 7.5rem;
@@ -27,7 +40,8 @@ section {
     }
 
     >p {
-      font-size: 1.5rem;
+      font-size: $font-small;
+      line-height: 2rem;
     }
   }
 

@@ -1,7 +1,71 @@
 @import "../../../../scss/styles.scss";
 
 nav {
-  background-color: $foreground;
-  border: 1px solid black;
+  animation: fadeIn 1s forwards;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   height: 5rem;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  &.position-change {
+    background-color: $foreground;
+    animation: fadeIn 1s forwards;
+    animation-direction: alternate;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    transform: translateY(-5rem);
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+
+  >ul {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    width: 50%;
+
+    @include media-breakpoint-down(md) {
+      width: 75%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+
+    >li {
+      color: $background;
+      font-size: 1.5rem;
+    }
+  }
+
+  fa-icon {
+    color: $background;
+    display: none;
+    font-size: 2.5rem;
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

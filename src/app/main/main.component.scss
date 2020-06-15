@@ -7,43 +7,43 @@ main {
 
   >app-navigation {
     grid-column: 1 / 13;
-
-    // @include media-breakpoint-down(lg) {
-    //   grid-column: span 12;
-    // }
   }
 
   >.welcome-container {
     grid-column: 1 / 13;
     height: 100vh;
 
-    // @include media-breakpoint-down(lg) {
-    //   grid-column: span 12;
-    // }
+    @include media-breakpoint-down(md) {
+      height: auto;
+    }
+  }
+
+  >app-food {
+    grid-column: 1 / 7;
+
+    @include media-breakpoint-down(md) {
+      grid-column: span 12;
+    }
+  }
+
+  >app-drink {
+    grid-column: 7 / 13;
+
+    @include media-breakpoint-down(md) {
+      grid-column: span 12;
+    }
   }
 
   >app-provisions {
     grid-column: 1 / 13;
-
-    // @include media-breakpoint-down(lg) {
-    //   grid-column: span 12;
-    // }
   }
 
   >app-social {
     grid-column: 1 / 13;
-
-    // @include media-breakpoint-down(lg) {
-    //   grid-column: span 12;
-    // }
   }
 
   >app-featured-blog {
     grid-column: 1 / 7;
-
-    // @include media-breakpoint-down(lg) {
-    //   grid-column: 1 / 7;
-    // }
 
     @include media-breakpoint-down(md) {
       grid-column: span 12;
@@ -53,10 +53,6 @@ main {
   >app-calendar {
     grid-column: 7 / 13;
 
-    // @include media-breakpoint-down(lg) {
-    //   grid-column: 7 / 13;
-    // }
-
     @include media-breakpoint-down(md) {
       grid-column: span 12;
     }
@@ -64,18 +60,9 @@ main {
 
   >app-reviews {
     grid-column: 1 / 13;
-
-
-    // @include media-breakpoint-down(lg) {
-    //   grid-column: span 12;
-    // }
   }
 
   >app-footer {
     grid-column: 1 / 13;
-
-    // @include media-breakpoint-down(lg) {
-    //   grid-column: span 12;
-    // }
   }
 }

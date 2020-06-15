@@ -1,1 +1,22 @@
-<nav></nav>
+<nav *ngIf="!changeNavPosition">
+  <ul>
+    <li>About</li>
+    <li>Provisions</li>
+    <li>Social</li>
+    <li>Blog</li>
+    <li>Events</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+
+<nav *ngIf="changeNavPosition" class='position-change'>
+  <ul>
+    <li>About</li>
+    <li>Provisions</li>
+    <li>Social</li>
+    <li>Blog</li>
+    <li>Events</li>
+    <li>Contact</li>
+  </ul>
+  <fa-icon [icon]="faBars"></fa-icon>
+</nav>

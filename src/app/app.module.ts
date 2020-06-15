@@ -13,13 +13,14 @@ import { NavigationComponent } from './shared/components/navigation/navigation.c
 import { AboutComponent } from './main/about/about.component';
 import { SocialComponent } from './main/social/social.component';
 import { ReviewsComponent } from './main/reviews/reviews.component';
-import { ProvisionsComponent } from './main/provisions/provisions.component';
 import { ContactComponent } from './shared/components/footer/contact/contact.component';
 import { JumbotronComponent } from './main/jumbotron/jumbotron.component';
 import { CalendarComponent } from './main/calendar/calendar.component';
 import { FeaturedBlogComponent } from './main/featured-blog/featured-blog.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FoodComponent } from './main/provisions/food/food.component';
+import { DrinkComponent } from './main/provisions/drink/drink.component';
 
 @NgModule({
   declarations: [
@@ -34,11 +35,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AboutComponent,
     SocialComponent,
     ReviewsComponent,
-    ProvisionsComponent,
     ContactComponent,
     JumbotronComponent,
     CalendarComponent,
-    FeaturedBlogComponent
+    FeaturedBlogComponent,
+    FoodComponent,
+    DrinkComponent
   ],
   imports: [
     BrowserModule,

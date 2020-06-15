@@ -6,4 +6,35 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   height: 70%;
+  position: relative;
+  @include media-breakpoint-down(sm) {
+    height: auto;
+  }
+
+  >.logo-container {
+    grid-column: 2 / 4;
+
+    >.logo {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding-top: 3rem;
+      @include media-breakpoint-down(sm) {
+        padding: 3rem;
+      }
+      >fa-icon {
+        color: $background;
+        font-size: $font-large;
+      }
+      >p {
+        color: $background;
+        font-size: $font-large;
+        margin: 0;
+        text-align: center;
+        >span {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
 }

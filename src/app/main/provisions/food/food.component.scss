@@ -1,0 +1,9 @@
+@import "../../../../scss/styles.scss";
+
+  section {
+    background-image: url(/assets/images/food.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: $height-medium;
+  }

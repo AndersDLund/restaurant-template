@@ -18,7 +18,7 @@ section {
 
     >p {
       color: $background;
-      font-size: 4rem;
+      font-size: $font-regular;
       margin: 0;
       text-align: center;
     }
@@ -35,12 +35,12 @@ section {
 
   >.featured {
     background-color: $accent;
-    bottom: 0;
     color: $background;
     font-size: 1.5rem;
+    left: 0;
     margin: 0;
     padding: .5rem;
     position: absolute;
-    right: 0;
+    top: 0;
   }
 }
